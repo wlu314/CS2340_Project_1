@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">CS2340_1</string>
     <string name="georgia_tech_logo_description" />
+    <string name="backbutton"><![CDATA[<-]]></string>
+    <string name="forwardbutton"><![CDATA[->]]></string>
 </resources>
