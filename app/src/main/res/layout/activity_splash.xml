@@ -10,7 +10,7 @@
         android:layout_height="150dp"
         android:layout_gravity="center"
         android:src="@drawable/gt_logo_transparent"
-        android:contentDescription="Georgia Tech Logo Transparent"
+        android:contentDescription="@string/georgia_tech_logo_description"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true">
     </ImageView>
