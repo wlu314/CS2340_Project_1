@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 
-import java.util.Objects;
 public class SplashActivity extends AppCompatActivity {
 
     @Override
@@ -24,14 +23,12 @@ public class SplashActivity extends AppCompatActivity {
 
         //Changes the screen from SplashActivity to Main Activity
         // Use loop since Handler is depreciated
-        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent i = new Intent(SplashActivity.this, MainActivity.class);
-                startActivity(i);
-                finish();
-            }
+        new Handler(Looper.getMainLooper()).postDelayed(() -> {
+            Intent i = new Intent(SplashActivity.this, MainActivity.class);
+            startActivity(i);
+            finish();
         }, 3000);
+
 
     }
 }
