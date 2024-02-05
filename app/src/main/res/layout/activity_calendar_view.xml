@@ -5,44 +5,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </LinearLayout>
+    android:orientation="vertical"
+    android:background="@color/white">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="20dp">
-        <Button
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white">
+        <ImageButton
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_weight="1"
-            android:text="@string/backbutton"
+            android:src="@drawable/back_button_image"
             android:textColor="@color/black"
-            android:background="@color/white"
+            android:backgroundTint="@color/white"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:onClick="previous_month_action"/>
+            android:onClick="month_back_button"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Text"
+            android:layout_gravity="center"
             android:id="@+id/month_textview"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="25dp"/>
-        <Button
+        <ImageButton
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_weight="1"
-            android:text="@string/forwardbutton"
             android:textColor="@color/black"
-            android:background="@color/white"
+            android:src="@drawable/forward_button_image"
+            android:backgroundTint="@color/white"
             android:textStyle="bold"
             android:textSize="20sp"
             android:onClick="next_month_action"/>
@@ -127,12 +125,35 @@
         android:id="@+id/calendar_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="560dp"/>
-
-    <ImageButton
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:scaleType="center"
-        android:id="@+id/to_do_list_btn"
-        android:src="@drawable/to_do_list_foreground" />
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To Do"
+            android:background="@color/black"
+            android:id="@+id/to_do_list_btn"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/weekly_view_btn"
+            android:text="Weekly"
+            android:background="@color/black"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/schedule_btn"
+            android:text="Schedule"
+            android:background="@color/black"/>
+        <Button
+            android:id="@+id/add_event_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:text="Add" />
+    </LinearLayout>
 </LinearLayout>

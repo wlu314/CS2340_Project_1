@@ -12,6 +12,7 @@ import android.widget.Button;
 
 import com.example.cs2340_1.Adapter.to_do_adapter;
 import com.example.cs2340_1.Model.to_do_model;
+import com.example.cs2340_1.Utils.ButtonClickHandler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,17 +54,9 @@ public class to_do_activity extends AppCompatActivity {
         adapter.setTasks(to_do_list);
 
         //Back to Calendar View Button
+        ButtonClickHandler click_handler = new ButtonClickHandler(this);
         back_button = (Button) findViewById(R.id.todolist_back_btn);
-        back_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                back_onclick();
-            }
-        });
-    }
-    //To Do List => Calendar View
-    public void back_onclick() {
-        Intent intent = new Intent(this, calendar_view.class);
-        startActivity(intent);
+        click_handler.setupButtonClick(back_button, calendar_view.class);
+
     }
 }

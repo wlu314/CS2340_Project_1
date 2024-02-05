@@ -3,4 +3,5 @@
     <string name="georgia_tech_logo_description" />
     <string name="backbutton"><![CDATA[<-]]></string>
     <string name="forwardbutton"><![CDATA[->]]></string>
+    <string name="notification">Notification</string>
 </resources>
