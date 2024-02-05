@@ -2,14 +2,12 @@ package com.example.cs2340_1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 
-@SuppressLint("CustomSplashScreen")
 public class splash_activity extends AppCompatActivity {
 
     @Override

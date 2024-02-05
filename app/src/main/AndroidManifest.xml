@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CS2340_1">
         <activity
-            android:name=".SplashActivity"
+            android:name=".splash_activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,13 +21,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".calendar_view">
+        </activity>
+        <activity
+            android:name=".to_do_activity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="com.example.cs2340_1.ACTION_TODO" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+
         </activity>
     </application>
 

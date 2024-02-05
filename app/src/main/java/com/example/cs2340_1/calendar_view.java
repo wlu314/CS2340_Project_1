@@ -23,24 +23,18 @@ public class calendar_view extends AppCompatActivity implements calendar_adaptor
     private RecyclerView calendar_recycler_view;
     private LocalDate selected_date;
 
-    //Accesses to do List
-    private ImageButton to_do_list_button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calendar);
+        setContentView(R.layout.activity_calendar_view);
         initWidgets();
         selected_date = LocalDate.now();
         setMonthView();
 
         //allows ImageButton to travel to "Main Activity"
-        to_do_list_button = (ImageButton) findViewById(R.id.to_do_list_btn);
-        to_do_list_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                open_to_do_list();
-            }
-        });
+        //Accesses to do List
+        ImageButton to_do_list_button = (ImageButton) findViewById(R.id.to_do_list_btn);
+        to_do_list_button.setOnClickListener(v -> open_to_do_list());
     }
     //Calendar View => To Do List
     public void open_to_do_list() {
