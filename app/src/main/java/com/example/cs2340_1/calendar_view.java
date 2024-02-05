@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.cs2340_1.Adapter.calendar_adaptor;
-import com.example.cs2340_1.Utils.ButtonClickHandler;
+import com.example.cs2340_1.Utils.btn_click_handler;
 
 import java.time.LocalDate;
 import java.time.YearMonth;
@@ -37,7 +36,7 @@ public class calendar_view extends AppCompatActivity implements calendar_adaptor
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calendar_view);
+        setContentView(R.layout.calendar_view);
 
         //Accessed to layout
         calendar_recycler_view = findViewById(R.id.calendar_recycler_view);
@@ -50,8 +49,8 @@ public class calendar_view extends AppCompatActivity implements calendar_adaptor
         setMonthView();
 
 
-        // SET UP ButtonClickHandler
-        ButtonClickHandler click_handler = new ButtonClickHandler(this);
+        // SET UP btn_click_handler
+        btn_click_handler click_handler = new btn_click_handler(this);
         // TO DO LIST BUTTON
         Button to_do_list_button = findViewById(R.id.to_do_list_btn);
         // ADD NEW CLASS BUTTON

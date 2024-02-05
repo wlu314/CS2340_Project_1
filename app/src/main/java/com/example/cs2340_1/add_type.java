@@ -5,16 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 
-import com.example.cs2340_1.Utils.ButtonClickHandler;
+import com.example.cs2340_1.Utils.btn_click_handler;
 
 public class add_type extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_type);
-        //Creating ButtonClickHandler object
-        ButtonClickHandler click_handler = new ButtonClickHandler(this);
+        setContentView(R.layout.add_type);
+        //Creating btn_click_handler object
+        btn_click_handler click_handler = new btn_click_handler(this);
 
 
 

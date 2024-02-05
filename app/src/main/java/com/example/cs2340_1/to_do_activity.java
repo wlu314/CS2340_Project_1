@@ -5,14 +5,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ActionBar;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 import com.example.cs2340_1.Adapter.to_do_adapter;
 import com.example.cs2340_1.Model.to_do_model;
-import com.example.cs2340_1.Utils.ButtonClickHandler;
+import com.example.cs2340_1.Utils.btn_click_handler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +25,7 @@ public class to_do_activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         to_do_list = new ArrayList<>();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_to_do);
+        setContentView(R.layout.to_do_list_main);
 
         //Hides the action bar
         ActionBar actionBar = getActionBar();
@@ -54,7 +52,7 @@ public class to_do_activity extends AppCompatActivity {
         adapter.setTasks(to_do_list);
 
         //Back to Calendar View Button
-        ButtonClickHandler click_handler = new ButtonClickHandler(this);
+        btn_click_handler click_handler = new btn_click_handler(this);
         back_button = (Button) findViewById(R.id.todolist_back_btn);
         click_handler.setupButtonClick(back_button, calendar_view.class);
 

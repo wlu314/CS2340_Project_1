@@ -4,17 +4,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.Button;
 
-import com.example.cs2340_1.R;
-import com.example.cs2340_1.add_type_assignment;
-import com.example.cs2340_1.add_type_course;
-import com.example.cs2340_1.add_type_exam;
-import com.example.cs2340_1.calendar_view;
-
-public class ButtonClickHandler {
+public class btn_click_handler {
 
     private final Context context;
     private Button back_button;
-    public ButtonClickHandler(Context context) {
+    public btn_click_handler(Context context) {
         this.context = context;
     }
     /**

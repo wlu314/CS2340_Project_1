@@ -16,13 +16,13 @@ import java.util.List;
 
 public class to_do_adapter extends RecyclerView.Adapter<to_do_adapter.ViewHolder> {
     private List<to_do_model> to_do_list;
-    private to_do_activity activity;
+    public to_do_activity activity;
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View item_view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.task_layout, parent, false);
+                .inflate(R.layout.to_do_list_task_layout, parent, false);
         return new ViewHolder(item_view);
     }
 

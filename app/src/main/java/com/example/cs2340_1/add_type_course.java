@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.cs2340_1.Utils.ButtonClickHandler;
+import com.example.cs2340_1.Utils.btn_click_handler;
 import com.example.cs2340_1.Utils.date_picker;
 import com.example.cs2340_1.Utils.time_picker;
 
@@ -16,10 +16,10 @@ public class add_type_course extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_type_course);
+        setContentView(R.layout.add_type_course);
 
-        //Creating ButtonClickHandler object
-        ButtonClickHandler click_handler = new ButtonClickHandler(this);
+        //Creating btn_click_handler object
+        btn_click_handler click_handler = new btn_click_handler(this);
         Button button = findViewById(R.id.course_exit_button);
         click_handler.setupButtonClick(button, add_type.class);
 
